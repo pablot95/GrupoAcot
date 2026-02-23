@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto — ACOT S.A.</title>
+  <meta name="description" content="Contacte a ACOT S.A. — Solicite presupuestos sin cargo para obras, remodelaciones y mantenimiento industrial.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-logo">
+        <span>ACOT S.A.</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="obras.html">Obras</a></li>
+        <li><a href="mantenimiento.html">Mantenimiento</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <h1>Contacto</h1>
+      <p>Estamos listos para ayudarlo. Solicite su presupuesto sin compromiso.</p>
+      <div class="breadcrumb">
+        <a href="index.html">Inicio</a> / <span>Contacto</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid reveal">
+        <div class="contact-info">
+          <h2 style="font-size: 1.8rem; margin-bottom: 8px;">Hablemos de su proyecto</h2>
+          <p style="color: var(--gray); margin-bottom: 30px;">Complete el formulario o contáctenos directamente. Le responderemos a la brevedad.</p>
+
+          <div class="contact-info-card">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div>
+              <h4>Dirección</h4>
+              <p>Buenos Aires, Argentina</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div>
+              <h4>Teléfono</h4>
+              <p>+54 (11) 1234-5678</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <p>info@acotsa.com.ar</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div>
+              <h4>Horario de Atención</h4>
+              <p>Lunes a Viernes: 8:00 - 17:00</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3>Envíenos su consulta</h3>
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre">Nombre *</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Su nombre" required>
+              </div>
+              <div class="form-group">
+                <label for="apellido">Apellido *</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Su apellido" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@email.com" required>
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+54 (11) ...">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="servicio">Servicio de Interés *</label>
+              <select id="servicio" name="servicio" required>
+                <option value="">Seleccione un servicio</option>
+                <option value="obras-nuevas">Obras Nuevas</option>
+                <option value="remodelaciones">Remodelaciones</option>
+                <option value="impermeabilizacion">Impermeabilización de Cubiertas</option>
+                <option value="pisos-industriales">Pisos Industriales / Pintura Epoxi</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Mensaje *</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Describa brevemente su proyecto o consulta..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar Consulta</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="map-section">
+    <div style="text-align: center;">
+      <svg viewBox="0 0 24 24" width="48" height="48" stroke="#9E9E9E" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+        <circle cx="12" cy="10" r="3"></circle>
+      </svg>
+      <p style="margin-top: 12px;">Aquí puede integrar Google Maps con su ubicación</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-footer">
+            <span>ACOT S.A.</span>
+          </div>
+          <p>Empresa constructora especializada en obras civiles y mantenimiento industrial. Más de 20 años brindando soluciones de calidad.</p>
+        </div>
+        <div>
+          <h4>Navegación</h4>
+          <div class="footer-links">
+            <a href="index.html">Inicio</a>
+            <a href="obras.html">Obras</a>
+            <a href="mantenimiento.html">Mantenimiento</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+          </div>
+        </div>
+        <div>
+          <h4>Servicios</h4>
+          <div class="footer-links">
+            <a href="obras.html">Obras Nuevas</a>
+            <a href="obras.html#remodelaciones">Remodelaciones</a>
+            <a href="mantenimiento.html">Impermeabilización</a>
+            <a href="mantenimiento.html#pisos">Pisos Industriales</a>
+          </div>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>Buenos Aires, Argentina</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+54 (11) 1234-5678</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>info@acotsa.com.ar</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ACOT S.A. — Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
