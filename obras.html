@@ -12,12 +12,24 @@
   <nav class="navbar scrolled" id="navbar">
     <div class="container">
       <a href="index.html" class="navbar-logo">
-        <span>ACOT S.A.</span>
+        <img src="images/logoobras.png" alt="">
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="obras.html" class="active">Obras</a></li>
-        <li><a href="mantenimiento.html">Mantenimiento</a></li>
+        <li class="dropdown">
+          <a href="obras.html" class="active">Obras <span class="dropdown-arrow">▼</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="obras.html#info">Info</a></li>
+            <li><a href="obras.html#galeria">Galería</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="mantenimiento.html">Mantenimiento <span class="dropdown-arrow">▼</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="mantenimiento.html#impermeabilizacion">Impermeabilización</a></li>
+            <li><a href="mantenimiento.html#pisos-industriales">Pisos Industriales</a></li>
+          </ul>
+        </li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
@@ -128,6 +140,59 @@
   </section>
 
   <section class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="subtitle">Collage de Obras</span>
+        <h2>Galería de Proyectos</h2>
+        <p>Algunos de nuestros trabajos destacados por categoría.</p>
+      </div>
+      <div class="collage-grid">
+        <!-- Refacciones de alto nivel -->
+        <div class="collage-category">
+          <h3>Refacciones de alto nivel</h3>
+          <img src="images/refaccionesdealtonivel1.jpeg" alt="Refacciones de alto nivel 1" loading="lazy">
+          <img src="images/refaccionesdealtonivel2.jpeg" alt="Refacciones de alto nivel 2" loading="lazy">
+        </div>
+        <!-- Revestimiento de ascensores -->
+        <div class="collage-category">
+          <h3>Revestimiento de ascensores</h3>
+          <img src="images/revestimientodeascensores1.jpeg" alt="Revestimiento de ascensores 1" loading="lazy">
+          <img src="images/revestimientodeascensores2.jpeg" alt="Revestimiento de ascensores 2" loading="lazy">
+        </div>
+        <!-- Barrios de vivienda -->
+        <div class="collage-category">
+          <h3>Barrios de vivienda</h3>
+          <img src="images/barriosdevivienda1.jpeg" alt="Barrios de vivienda 1" loading="lazy">
+          <img src="images/barriosdevivienda2.jpeg" alt="Barrios de vivienda 2" loading="lazy">
+        </div>
+        <!-- Propiedad horizontal -->
+        <div class="collage-category">
+          <h3>Propiedad horizontal</h3>
+          <img src="images/propiedadhorizontal1.jpeg" alt="Propiedad horizontal 1" loading="lazy">
+          <img src="images/propiedadhorizontal2.jpeg" alt="Propiedad horizontal 2" loading="lazy">
+        </div>
+        <!-- Restauración de frentes, impermeabilización y pintura -->
+        <div class="collage-category">
+          <h3>Restauración de frentes, impermeabilización y pintura</h3>
+          <img src="images/restauracióndefrentesimpermeabilizaciónypintura1.jpeg" alt="Restauración de frentes 1" loading="lazy">
+          <img src="images/restauracióndefrentesimpermeabilizaciónypintura2.jpeg" alt="Restauración de frentes 2" loading="lazy">
+        </div>
+        <!-- Estructuras de hormigón -->
+        <div class="collage-category">
+          <h3>Estructuras de hormigón</h3>
+          <img src="images/estructurasdehormigon1.jpeg" alt="Estructuras de hormigón 1" loading="lazy">
+          <img src="images/estructurasdehormigon2.jpeg" alt="Estructuras de hormigón 2" loading="lazy">
+        </div>
+        <!-- Grandes obras (3 imágenes) -->
+        <div class="collage-category">
+          <h3>Grandes obras</h3>
+          <img src="images/grandesobras1.jpeg" alt="Grandes obras 1" loading="lazy">
+          <img src="images/grandesobras2.jpeg" alt="Grandes obras 2" loading="lazy">
+          <img src="images/grandesobras3.jpeg" alt="Grandes obras 3" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
     <div class="container">
       <div class="section-header reveal">
         <span class="subtitle">Metodología</span>

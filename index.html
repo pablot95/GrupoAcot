@@ -12,12 +12,24 @@
   <nav class="navbar" id="navbar">
     <div class="container">
       <a href="index.html" class="navbar-logo">
-        <span>ACOT S.A.</span>
+        <img src="images/logonormal.png" alt="">
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" class="active">Inicio</a></li>
-        <li><a href="obras.html">Obras</a></li>
-        <li><a href="mantenimiento.html">Mantenimiento</a></li>
+        <li class="dropdown">
+          <a href="obras.html"><span>Obras</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="obras.html#info">Info</a></li>
+            <li><a href="obras.html#galeria">Galería</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="mantenimiento.html"><span>Mantenimiento</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="mantenimiento.html#impermeabilizacion">Impermeabilización</a></li>
+            <li><a href="mantenimiento.html#pisos-industriales">Pisos Industriales</a></li>
+          </ul>
+        </li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>

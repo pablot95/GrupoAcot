@@ -12,12 +12,24 @@
   <nav class="navbar scrolled" id="navbar">
     <div class="container">
       <a href="index.html" class="navbar-logo">
-        <span>ACOT S.A.</span>
+        <img src="images/logoimpermeabilizacion.png" alt="">
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="obras.html">Obras</a></li>
-        <li><a href="mantenimiento.html" class="active">Mantenimiento</a></li>
+        <li class="dropdown">
+          <a href="obras.html">Obras <span class="dropdown-arrow">▼</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="obras.html#info">Info</a></li>
+            <li><a href="obras.html#galeria">Galería</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="mantenimiento.html" class="active">Mantenimiento <span class="dropdown-arrow">▼</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="mantenimiento.html#impermeabilizacion">Impermeabilización</a></li>
+            <li><a href="mantenimiento.html#pisos-industriales">Pisos Industriales</a></li>
+          </ul>
+        </li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
@@ -187,12 +199,16 @@
     </div>
   </section>
 
-  <section class="section" id="pisos">
+  <section class="section" id="pisos-industriales">
     <div class="container">
       <div class="section-header reveal">
         <span class="subtitle">Pisos Industriales</span>
         <h2>Pisos Industriales &amp; Pintura Epoxi</h2>
         <p>Transformamos pisos deteriorados en superficies resistentes y profesionales. Vea nuestros resultados reales.</p>
+      </div>
+      <div class="pisos-industriales-galeria reveal" style="margin-bottom:32px; text-align:center;">
+        <h4 style="margin-bottom:12px;">Trabajo destacado</h4>
+        <img src="images/pisoindustrialtrabajo.jpeg" alt="Piso industrial realizado por ACOT" style="max-width:420px; width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.10);">
       </div>
 
       <div class="before-after-grid reveal">
@@ -350,5 +366,26 @@
   </footer>
 
   <script src="main.js"></script>
+</script>
+<script>
+// Cambia el logo al llegar a la sección de Pisos Industriales
+document.addEventListener('DOMContentLoaded', function() {
+  const logo = document.querySelector('.navbar-logo img');
+  const pisosSection = document.getElementById('pisos-industriales');
+  if (!logo || !pisosSection) return;
+  const originalLogo = logo.src;
+  const pisosLogo = 'images/logopisos.png';
+  function handleScroll() {
+    const rect = pisosSection.getBoundingClientRect();
+    if (rect.top <= 80 && rect.bottom > 80) {
+      logo.src = pisosLogo;
+    } else {
+      logo.src = originalLogo;
+    }
+  }
+  window.addEventListener('scroll', handleScroll);
+  handleScroll();
+});
+</script>
 </body>
 </html>
