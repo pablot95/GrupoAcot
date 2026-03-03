@@ -1,0 +1,11 @@
+# Procesar archivos .html como PHP
+AddHandler application/x-httpd-php .html
+
+# No listar directorios
+Options -Indexes
+
+# Proteger carpeta data
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^data/ - [F,L]
+</IfModule>

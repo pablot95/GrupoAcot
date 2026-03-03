@@ -119,17 +119,25 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      const btn = contactForm.querySelector('button[type="submit"]');
-      const originalText = btn.textContent;
-      btn.textContent = 'Enviando...';
-      btn.disabled = true;
+      const serviciosMap = {
+        'obras-nuevas': 'Obras Nuevas',
+        'remodelaciones': 'Remodelaciones',
+        'impermeabilizacion': 'Impermeabilización',
+        'pisos-industriales': 'Pisos Industriales / Pintura Epoxi',
+        'otro': 'Otro'
+      };
+      const servicioLabel = serviciosMap[data.servicio] || data.servicio;
+      const whatsappMsg = 
+        `Hola! Consulta desde el sitio web de ACOT S.A.:\n\n` +
+        `*Nombre:* ${data.nombre}${data.apellido ? ' ' + data.apellido : ''}\n` +
+        `*Email:* ${data.email}\n` +
+        `*Teléfono:* ${data.telefono || 'No indicado'}\n` +
+        `*Servicio:* ${servicioLabel}\n` +
+        `*Mensaje:* ${data.mensaje}`;
 
-      setTimeout(() => {
-        showNotification('¡Mensaje enviado con éxito! Nos pondremos en contacto a la brevedad.', 'success');
-        contactForm.reset();
-        btn.textContent = originalText;
-        btn.disabled = false;
-      }, 1500);
+      window.open('https://wa.me/5491134322208?text=' + encodeURIComponent(whatsappMsg), '_blank');
+      showNotification('Redirigiendo a WhatsApp...', 'success');
+      contactForm.reset();
     });
   }
 

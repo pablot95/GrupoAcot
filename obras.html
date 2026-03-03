@@ -1,3 +1,7 @@
+<?php
+$content = json_decode(file_get_contents(__DIR__ . '/data/content.json'), true);
+$obrasCategories = $content['obras']['categories'] ?? [];
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,7 +16,7 @@
   <nav class="navbar scrolled" id="navbar">
     <div class="container">
       <a href="index.html" class="navbar-logo">
-        <img src="images/logoobras.png" alt="">
+        <img src="uploads/logos/logoobras.png" alt="">
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Inicio</a></li>
@@ -146,50 +150,15 @@
         <h2>Galería de Proyectos</h2>
         <p>Algunos de nuestros trabajos destacados por categoría.</p>
       </div>
-      <div class="collage-grid">
-        <!-- Refacciones de alto nivel -->
+      <div class="collage-grid" id="dynamic-gallery">
+        <?php foreach ($obrasCategories as $cat): ?>
         <div class="collage-category">
-          <h3>Refacciones de alto nivel</h3>
-          <img src="images/refaccionesdealtonivel1.jpeg" alt="Refacciones de alto nivel 1" loading="lazy">
-          <img src="images/refaccionesdealtonivel2.jpeg" alt="Refacciones de alto nivel 2" loading="lazy">
+          <h3><?php echo htmlspecialchars($cat['title']); ?></h3>
+          <?php foreach ($cat['images'] as $img): ?>
+          <img src="<?php echo htmlspecialchars($img); ?>" alt="<?php echo htmlspecialchars($cat['title']); ?>" loading="lazy">
+          <?php endforeach; ?>
         </div>
-        <!-- Revestimiento de ascensores -->
-        <div class="collage-category">
-          <h3>Revestimiento de ascensores</h3>
-          <img src="images/revestimientodeascensores1.jpeg" alt="Revestimiento de ascensores 1" loading="lazy">
-          <img src="images/revestimientodeascensores2.jpeg" alt="Revestimiento de ascensores 2" loading="lazy">
-        </div>
-        <!-- Barrios de vivienda -->
-        <div class="collage-category">
-          <h3>Barrios de vivienda</h3>
-          <img src="images/barriosdevivienda1.jpeg" alt="Barrios de vivienda 1" loading="lazy">
-          <img src="images/barriosdevivienda2.jpeg" alt="Barrios de vivienda 2" loading="lazy">
-        </div>
-        <!-- Propiedad horizontal -->
-        <div class="collage-category">
-          <h3>Propiedad horizontal</h3>
-          <img src="images/propiedadhorizontal1.jpeg" alt="Propiedad horizontal 1" loading="lazy">
-          <img src="images/propiedadhorizontal2.jpeg" alt="Propiedad horizontal 2" loading="lazy">
-        </div>
-        <!-- Restauración de frentes, impermeabilización y pintura -->
-        <div class="collage-category">
-          <h3>Restauración de frentes, impermeabilización y pintura</h3>
-          <img src="images/restauracióndefrentesimpermeabilizaciónypintura1.jpeg" alt="Restauración de frentes 1" loading="lazy">
-          <img src="images/restauracióndefrentesimpermeabilizaciónypintura2.jpeg" alt="Restauración de frentes 2" loading="lazy">
-        </div>
-        <!-- Estructuras de hormigón -->
-        <div class="collage-category">
-          <h3>Estructuras de hormigón</h3>
-          <img src="images/estructurasdehormigon1.jpeg" alt="Estructuras de hormigón 1" loading="lazy">
-          <img src="images/estructurasdehormigon2.jpeg" alt="Estructuras de hormigón 2" loading="lazy">
-        </div>
-        <!-- Grandes obras (3 imágenes) -->
-        <div class="collage-category">
-          <h3>Grandes obras</h3>
-          <img src="images/grandesobras1.jpeg" alt="Grandes obras 1" loading="lazy">
-          <img src="images/grandesobras2.jpeg" alt="Grandes obras 2" loading="lazy">
-          <img src="images/grandesobras3.jpeg" alt="Grandes obras 3" loading="lazy">
-        </div>
+        <?php endforeach; ?>
       </div>
     </div>
   </section>
@@ -279,6 +248,11 @@
       </div>
     </div>
   </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://wa.me/5491134322208" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.736 5.469 2.027 7.77L0 32l8.445-2.015A15.945 15.945 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.474a13.44 13.44 0 01-6.857-1.874l-.49-.291-5.014 1.196 1.22-4.878-.32-.503A13.44 13.44 0 012.526 16C2.526 8.544 8.544 2.526 16 2.526S29.474 8.544 29.474 16 23.456 29.474 16 29.474zm7.39-10.012c-.405-.202-2.396-1.183-2.768-1.317-.372-.135-.643-.202-.913.202-.27.405-1.046 1.317-1.283 1.587-.236.27-.472.304-.877.101-.405-.202-1.71-.63-3.257-2.01-1.204-1.073-2.016-2.398-2.253-2.803-.236-.405-.025-.624.177-.825.181-.181.405-.472.607-.708.202-.236.269-.405.404-.675.135-.27.067-.506-.034-.708-.101-.202-.913-2.201-1.25-3.013-.33-.792-.664-.685-.913-.697l-.776-.013c-.27 0-.708.101-1.079.506-.371.405-1.418 1.385-1.418 3.38s1.451 3.921 1.654 4.191c.202.27 2.857 4.362 6.922 6.122.967.418 1.719.667 2.306.854.969.308 1.852.264 2.549.16.777-.115 2.396-.98 2.734-1.928.337-.948.337-1.76.236-1.928-.101-.168-.37-.269-.776-.472z"/></svg>
+  </a>
 
   <script src="main.js"></script>
 </body>

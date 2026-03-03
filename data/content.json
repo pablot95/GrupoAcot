@@ -1,0 +1,119 @@
+{
+  "obras": {
+    "categories": [
+      {
+        "id": "refacciones-alto-nivel",
+        "title": "Refacciones de alto nivel",
+        "images": [
+          "uploads/obras/refaccionesdealtonivel1.jpeg",
+          "uploads/obras/refaccionesdealtonivel2.jpeg"
+        ]
+      },
+      {
+        "id": "revestimiento-ascensores",
+        "title": "Revestimiento de ascensores",
+        "images": [
+          "uploads/obras/revestimientodeascensores1.jpeg",
+          "uploads/obras/revestimientodeascensores2.jpeg"
+        ]
+      },
+      {
+        "id": "barrios-vivienda",
+        "title": "Barrios de vivienda",
+        "images": [
+          "uploads/obras/barriosdevivienda1.jpeg",
+          "uploads/obras/barriosdevivienda2.jpeg"
+        ]
+      },
+      {
+        "id": "propiedad-horizontal",
+        "title": "Propiedad horizontal",
+        "images": [
+          "uploads/obras/propiedadhorizontal1.jpeg",
+          "uploads/obras/propiedadhorizontal2.jpeg"
+        ]
+      },
+      {
+        "id": "restauracion-frentes",
+        "title": "Restauración de frentes, impermeabilización y pintura",
+        "images": [
+          "uploads/obras/restauracióndefrentesimpermeabilizaciónypintura1.jpeg",
+          "uploads/obras/restauracióndefrentesimpermeabilizaciónypintura2.jpeg"
+        ]
+      },
+      {
+        "id": "estructuras-hormigon",
+        "title": "Estructuras de hormigón",
+        "images": [
+          "uploads/obras/estructurasdehormigon1.jpeg",
+          "uploads/obras/estructurasdehormigon2.jpeg"
+        ]
+      },
+      {
+        "id": "grandes-obras",
+        "title": "Grandes obras",
+        "images": [
+          "uploads/obras/grandesobras1.jpeg",
+          "uploads/obras/grandesobras2.jpeg",
+          "uploads/obras/grandesobras3.jpeg"
+        ]
+      }
+    ]
+  },
+  "mantenimiento": {
+    "impermeabilizacion": {
+      "title": "Impermeabilización de Cubiertas",
+      "subtitle": "Impermeabilización",
+      "description": "Trabajamos con dos productos líderes del mercado. Nos ajustamos a la mejor solución técnica y a su bolsillo.",
+      "alumanation": {
+        "title": "Alumanation 301",
+        "tag": "Producto Premium",
+        "images": [
+          "uploads/mantenimiento/alumination301.jpeg",
+          "uploads/mantenimiento/alumination301(2).jpeg",
+          "uploads/mantenimiento/alumination301(3).jpeg"
+        ]
+      },
+      "microgoma": {
+        "title": "Microgoma",
+        "tag": "Solución Integral",
+        "leadText": "Solución integral y definitiva para impermeabilizar y aislar.",
+        "description": "Microgoma es el impermeabilizante y aislante térmico y anti granizo, líder en el mercado, elaborado con caucho reciclado de cubiertas de autos recuperadas. Con su fórmula innovadora, Microgoma ofrece una protección duradera y efectiva contra la humedad, el agua y las variaciones de temperatura, mientras contribuye a la sostenibilidad ambiental.",
+        "advantages": [
+          "Impermeabiliza y aísla en una sola aplicación",
+          "Aislante térmico y anti granizo",
+          "Elaborado con caucho reciclado",
+          "Protección duradera contra humedad y agua",
+          "Contribuye a la sostenibilidad ambiental"
+        ]
+      },
+      "workGallery": {
+        "title": "Nuestro equipo en acción",
+        "images": [
+          "uploads/mantenimiento/impermeabilizaciontrabajando1.jpeg",
+          "uploads/mantenimiento/impermeabilizaciontrabajando2.jpeg"
+        ],
+        "video": "uploads/mantenimiento/impermeabilizacionvideo.mp4"
+      }
+    },
+    "pisos": {
+      "title": "Pisos Industriales & Pintura Epoxi",
+      "subtitle": "Pisos Industriales",
+      "description": "Transformamos pisos deteriorados en superficies resistentes y profesionales. Vea nuestros resultados reales.",
+      "images": [
+        "uploads/mantenimiento/pisoantesydespues.jpeg",
+        "uploads/mantenimiento/pisoantesydespues2.jpeg",
+        "uploads/mantenimiento/pisoantesydespues3.jpeg",
+        "uploads/mantenimiento/pisoantesydespues4.jpeg"
+      ],
+      "services": [
+        "Pintura epoxi para pisos industriales",
+        "Pisos de poliuretano de alta resistencia",
+        "Revestimientos antideslizantes",
+        "Señalización industrial de pisos",
+        "Recuperación de pisos deteriorados",
+        "Asesoramiento en productos especializados"
+      ]
+    }
+  }
+}

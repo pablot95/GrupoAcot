@@ -1,0 +1,10 @@
+# Servir index.php al acceder a la carpeta
+DirectoryIndex index.php
+
+# Denegar acceso directo a archivos PHP sensibles
+<FilesMatch "^(api|logout)\.php$">
+    # Solo accesible vía POST o sesión
+</FilesMatch>
+
+# No listar directorio
+Options -Indexes
