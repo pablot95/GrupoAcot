@@ -1,0 +1,189 @@
+<?php
+$content = json_decode(file_get_contents(__DIR__ . '/data/content.json'), true);
+$pisos = $content['mantenimiento']['pisos'];
+$pisosImages = $pisos['images'] ?? [];
+$pisosServices = $pisos['services'] ?? [];
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pisos Industriales — Grupo ACOT</title>
+  <meta name="description" content="Grupo ACOT — Pisos industriales y pintura epoxi. Transformamos pisos deteriorados en superficies resistentes y profesionales.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-logo">
+        <img src="uploads/logos/logopisos.png" alt="">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Inicio</a></li>
+        <li class="dropdown">
+          <a href="obras.html">Obras <span class="dropdown-arrow">▼</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="obras.html#info">Info</a></li>
+            <li><a href="obras.html#galeria">Galería</a></li>
+          </ul>
+        </li>
+        <li><a href="impermeabilizacion.html">Impermeabilización</a></li>
+        <li><a href="pisos-industriales.html" class="active">Pisos Industriales</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <h1><?php echo htmlspecialchars($pisos['title']); ?></h1>
+      <p><?php echo htmlspecialchars($pisos['description']); ?></p>
+      <div class="breadcrumb">
+        <a href="index.html">Inicio</a> / <a href="impermeabilizacion.html">Mantenimiento</a> / <span>Pisos Industriales</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="pisos-industriales">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="subtitle"><?php echo htmlspecialchars($pisos['subtitle']); ?></span>
+        <h2><?php echo htmlspecialchars($pisos['title']); ?></h2>
+        <p><?php echo htmlspecialchars($pisos['description']); ?></p>
+      </div>
+
+      <div class="before-after-grid reveal">
+        <?php foreach ($pisosImages as $i => $img): ?>
+        <div class="before-after-card">
+          <div class="before-after-img">
+            <img src="<?php echo htmlspecialchars($img); ?>" alt="Piso industrial <?php echo $i + 1; ?>" loading="lazy">
+          </div>
+        </div>
+        <?php endforeach; ?>
+      </div>
+
+      <div class="pisos-services-grid reveal">
+        <?php foreach ($pisosServices as $srv): ?>
+        <div class="piso-service-item">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span><?php echo htmlspecialchars($srv); ?></span>
+        </div>
+        <?php endforeach; ?>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;" class="reveal">
+        <a href="contacto.html" class="btn btn-primary">Solicitar Presupuesto</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="subtitle">Ventajas</span>
+        <h2>¿Por qué confiar en nuestros pisos industriales?</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card reveal">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3>Productos Certificados</h3>
+          <p>Trabajamos con pinturas epoxi y poliuretano de alta resistencia, garantizando durabilidad en ambientes industriales exigentes.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="7"></circle>
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+            </svg>
+          </div>
+          <h3>Personal Especializado</h3>
+          <p>Nuestros técnicos están capacitados para aplicar correctamente cada sistema, asegurando acabados profesionales.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h3>Mejor Relación Precio-Calidad</h3>
+          <p>Nos ajustamos a la mejor solución técnica y a su bolsillo, sin resignar calidad en los resultados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark cta-section">
+    <div class="container reveal">
+      <h2>Transforme sus pisos hoy</h2>
+      <p>Solicite una evaluación sin cargo y reciba una propuesta adaptada a sus necesidades.</p>
+      <a href="contacto.html" class="btn btn-primary">Solicitar Evaluación</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-footer">
+            <span>ACOT S.A.</span>
+          </div>
+          <p>Empresa constructora especializada en obras civiles y mantenimiento industrial. Más de 20 años brindando soluciones de calidad.</p>
+        </div>
+        <div>
+          <h4>Navegación</h4>
+          <div class="footer-links">
+            <a href="index.html">Inicio</a>
+            <a href="obras.html">Obras</a>
+            <a href="impermeabilizacion.html">Impermeabilización</a>
+            <a href="pisos-industriales.html">Pisos Industriales</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+          </div>
+        </div>
+        <div>
+          <h4>Servicios</h4>
+          <div class="footer-links">
+            <a href="obras.html">Obras Nuevas</a>
+            <a href="obras.html#remodelaciones">Remodelaciones</a>
+            <a href="impermeabilizacion.html">Impermeabilización</a>
+            <a href="pisos-industriales.html">Pisos Industriales</a>
+          </div>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>Buenos Aires, Argentina</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+54 9 11 3432-2208</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>info@grupoacot.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ACOT S.A. — Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

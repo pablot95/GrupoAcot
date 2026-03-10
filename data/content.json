@@ -79,6 +79,10 @@
         "tag": "Solución Integral",
         "leadText": "Solución integral y definitiva para impermeabilizar y aislar.",
         "description": "Microgoma es el impermeabilizante y aislante térmico y anti granizo, líder en el mercado, elaborado con caucho reciclado de cubiertas de autos recuperadas. Con su fórmula innovadora, Microgoma ofrece una protección duradera y efectiva contra la humedad, el agua y las variaciones de temperatura, mientras contribuye a la sostenibilidad ambiental.",
+        "images": [
+          "uploads/mantenimiento/microgoma1.jpeg",
+          "uploads/mantenimiento/microgoma2.jpeg"
+        ],
         "advantages": [
           "Impermeabiliza y aísla en una sola aplicación",
           "Aislante térmico y anti granizo",
