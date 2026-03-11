@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $content = json_decode(file_get_contents(__DIR__ . '/data/content.json'), true);
 $imp = $content['mantenimiento']['impermeabilizacion'];
 $alumImages = $imp['alumanation']['images'] ?? [];
@@ -20,22 +20,22 @@ $workVideo = $imp['workGallery']['video'] ?? '';
 
   <nav class="navbar scrolled" id="navbar">
     <div class="container">
-      <a href="index.html" class="navbar-logo">
+      <a href="/" class="navbar-logo">
         <img src="uploads/logos/logoimpermeabilizacion.png" alt="">
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Inicio</a></li>
+        <li><a href="/">Inicio</a></li>
         <li class="dropdown">
-          <a href="obras.html">Obras <span class="dropdown-arrow">▼</span></a>
+          <a href="/obras">Obras <span class="dropdown-arrow">▼</span></a>
           <ul class="dropdown-menu">
-            <li><a href="obras.html#info">Info</a></li>
-            <li><a href="obras.html#galeria">Galería</a></li>
+            <li><a href="/obras#info">Info</a></li>
+            <li><a href="/obras#galeria">Galería</a></li>
           </ul>
         </li>
-        <li><a href="impermeabilizacion.html" class="active">Impermeabilización</a></li>
-        <li><a href="pisos-industriales.html">Pisos Industriales</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="/impermeabilizacion" class="active">Impermeabilización</a></li>
+        <li><a href="/pisos-industriales">Pisos Industriales</a></li>
+        <li><a href="/nosotros">Nosotros</a></li>
+        <li><a href="/contacto">Contacto</a></li>
       </ul>
       <div class="hamburger" id="hamburger">
         <span></span>
@@ -50,7 +50,7 @@ $workVideo = $imp['workGallery']['video'] ?? '';
       <h1>Impermeabilización de Cubiertas</h1>
       <p>Trabajamos con dos productos líderes del mercado. Nos ajustamos a la mejor solución técnica y a su bolsillo.</p>
       <div class="breadcrumb">
-        <a href="index.html">Inicio</a> / <a href="impermeabilizacion.html">Mantenimiento</a> / <span>Impermeabilización</span>
+        <a href="/">Inicio</a> / <a href="/impermeabilizacion">Mantenimiento</a> / <span>Impermeabilización</span>
       </div>
     </div>
   </section>
@@ -75,7 +75,7 @@ $workVideo = $imp['workGallery']['video'] ?? '';
             <?php endforeach; ?>
           </div>
           <div style="margin-top: 28px;">
-            <a href="contacto.html" class="btn btn-primary">Solicitar Presupuesto</a>
+            <a href="/contacto" class="btn btn-primary">Solicitar Presupuesto</a>
           </div>
         </div>
         <!-- Columna derecha: equipo en acción -->
@@ -145,7 +145,7 @@ $workVideo = $imp['workGallery']['video'] ?? '';
             </ul>
           </div>
 
-          <a href="contacto.html" class="btn btn-primary">Solicitar Presupuesto</a>
+          <a href="/contacto" class="btn btn-primary">Solicitar Presupuesto</a>
         </div>
 
         <div class="product-highlights">
@@ -247,7 +247,7 @@ $workVideo = $imp['workGallery']['video'] ?? '';
     <div class="container reveal">
       <h2>Proteja sus instalaciones hoy</h2>
       <p>Solicite una evaluación sin cargo y reciba una propuesta adaptada a sus necesidades.</p>
-      <a href="contacto.html" class="btn btn-primary">Solicitar Evaluación</a>
+      <a href="/contacto" class="btn btn-primary">Solicitar Evaluación</a>
     </div>
   </section>
 
@@ -263,21 +263,21 @@ $workVideo = $imp['workGallery']['video'] ?? '';
         <div>
           <h4>Navegación</h4>
           <div class="footer-links">
-            <a href="index.html">Inicio</a>
-            <a href="obras.html">Obras</a>
-            <a href="impermeabilizacion.html">Impermeabilización</a>
-            <a href="pisos-industriales.html">Pisos Industriales</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="contacto.html">Contacto</a>
+            <a href="/">Inicio</a>
+            <a href="/obras">Obras</a>
+            <a href="/impermeabilizacion">Impermeabilización</a>
+            <a href="/pisos-industriales">Pisos Industriales</a>
+            <a href="/nosotros">Nosotros</a>
+            <a href="/contacto">Contacto</a>
           </div>
         </div>
         <div>
           <h4>Servicios</h4>
           <div class="footer-links">
-            <a href="obras.html">Obras Nuevas</a>
-            <a href="obras.html#remodelaciones">Remodelaciones</a>
-            <a href="impermeabilizacion.html">Impermeabilización</a>
-            <a href="pisos-industriales.html">Pisos Industriales</a>
+            <a href="/obras">Obras Nuevas</a>
+            <a href="/obras#remodelaciones">Remodelaciones</a>
+            <a href="/impermeabilizacion">Impermeabilización</a>
+            <a href="/pisos-industriales">Pisos Industriales</a>
           </div>
         </div>
         <div>
