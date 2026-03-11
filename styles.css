@@ -1599,10 +1599,12 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .product-content-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .product-lead {
@@ -1638,7 +1640,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .product-advantages ul li {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 10px;
   margin-bottom: 12px;
   font-size: 0.95rem;
@@ -1965,5 +1969,135 @@ h1, h2, h3, h4, h5, h6 {
   .whatsapp-float svg {
     width: 28px;
     height: 28px;
+  }
+}
+
+/* ===========================
+   Alumanation + Equipo layout
+   =========================== */
+.alum-equipo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.alum-col,
+.equipo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-header-left {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.section-header-left .subtitle {
+  display: inline-block;
+  color: var(--red);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 8px;
+}
+
+.section-header-left h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: -0.3px;
+}
+
+/* Alumanation — imágenes max-height 400px */
+.alum-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.alum-img-item {
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.alum-img-item img {
+  max-width: 600px;
+  height: auto;
+  display: block;
+}
+
+/* Equipo en acción — imágenes max-height 400px */
+.equipo-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.equipo-img-item {
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+}
+
+.equipo-img-item img {
+  max-width: 600px;
+  height: auto;
+  display: block;
+}
+
+.equipo-video video {
+  max-width: 600px;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+}
+
+/* Microgoma — 2 imágenes lado a lado, max-width 300px */
+.microgoma-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.microgoma-img-item {
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.microgoma-img-item img {
+  max-height: 600px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 960px) {
+  .alum-equipo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .alum-img-item img,
+  .equipo-img-item img {
+    max-height: none;
+    width: 100%;
+  }
+
+  .equipo-video video {
+    max-height: none;
+    width: 100%;
+  }
+
+  .microgoma-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .microgoma-img-item img {
+    max-width: 100%;
   }
 }

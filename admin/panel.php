@@ -20,7 +20,7 @@ $content = json_decode(file_get_contents($contentFile), true);
     <nav class="admin-nav">
         <div class="admin-nav-inner">
             <div class="admin-brand">
-                <h2>ACOT S.A.</h2>
+                <h2>GrupoAcot</h2>
                 <span class="admin-badge">Admin</span>
             </div>
             <div class="admin-nav-links">

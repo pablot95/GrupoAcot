@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
       const servicioLabel = serviciosMap[data.servicio] || data.servicio;
       const whatsappMsg = 
-        `Hola! Consulta desde el sitio web de ACOT S.A.:\n\n` +
+        `Hola! Consulta desde el sitio web de GrupoAcot.:\n\n` +
         `*Nombre:* ${data.nombre}${data.apellido ? ' ' + data.apellido : ''}\n` +
         `*Email:* ${data.email}\n` +
         `*Teléfono:* ${data.telefono || 'No indicado'}\n` +

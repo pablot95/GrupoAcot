@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="login-container">
         <div class="login-card">
             <div class="login-header">
-                <h1>ACOT S.A.</h1>
+                <h1>GrupoAcot</h1>
                 <p>Panel de Administración</p>
             </div>
             <?php if ($error): ?>
